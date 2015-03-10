@@ -1,5 +1,7 @@
 package practise
 
+//hint: https://twitter.github.io/scala_school/collections.html
+//and http://www.scala-lang.org/api/2.10.3/index.html#scala.collection.immutable.List
 object Practise3 {
   def addToAll(list: List[Int], amount: Int): List[Int] = ???
 
