@@ -15,7 +15,7 @@ var: 4
 pattern matching: 5
 apply: 11
 method parameters: 12
-recursion: 13
+recursion: 13, 15, 16
 
 linked list (recursion/pattern matching): 9, 10, 11, 12, 14
 
