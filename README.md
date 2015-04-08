@@ -14,7 +14,7 @@ Subjects:
 collection methods: 1, 2, 3
 flatmap, for: 6, 7, 8
 var: 4
-pattern matching: 5
+pattern matching: 5, 18
 apply: 11
 functions as objects: 17
 method parameters: 12
