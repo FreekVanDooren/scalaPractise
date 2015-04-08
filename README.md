@@ -18,6 +18,7 @@ pattern matching: 5, 18
 apply: 11
 functions as objects: 17
 method parameters: 12
+list: 19
 recursion: 13, 15, 16
 
 linked list (recursion/pattern matching): 9, 10, 11, 12, 14
