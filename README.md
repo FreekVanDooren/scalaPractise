@@ -1,6 +1,8 @@
 # scalaPractise
 short scala practises to start the day with
 
+First read https://twitter.github.io/scala_school/basics.html
+
 Import build.sbt in your favorite IDE, or just use sbt test
 
 Start with Practise0.scala
@@ -14,6 +16,7 @@ flatmap, for: 6, 7, 8
 var: 4
 pattern matching: 5
 apply: 11
+functions as objects: 17
 method parameters: 12
 recursion: 13, 15, 16
 
