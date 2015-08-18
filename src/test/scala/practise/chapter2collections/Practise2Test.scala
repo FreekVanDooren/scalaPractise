@@ -1,10 +1,13 @@
-package practise
+package practise.chapter2collections
 
 import org.scalatest.FunSuite
-import practise.chapter2collections.Practise2
-import Practise2._
+
+object Practise2 {
+  def map(list: List[Int], method: (Int => Int)): List[Int] = ???
+}
 
 class Practise2Test extends FunSuite {
+  import Practise2._
 
   test("map") {
     assert(map(List(1, 2, 3), { _ + 1}) === List(2, 3, 4))

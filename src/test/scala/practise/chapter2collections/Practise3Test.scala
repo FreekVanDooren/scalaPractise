@@ -1,10 +1,28 @@
-package practise
+package practise.chapter2collections
 
 import org.scalatest.FunSuite
-import practise.chapter2collections.Practise3
-import Practise3._
+
+//hint: https://twitter.github.io/scala_school/collections.html
+//and http://www.scala-lang.org/api/2.10.3/index.html#scala.collection.immutable.List
+object Practise3 {
+  def addToAll(list: List[Int], amount: Int): List[Int] = ???
+
+  def findNegativeNumbers(list: List[Int]): List[Int] = ???
+
+  def firstPositiveNumber(list: List[Int]): Option[Int] = ???
+
+  def sum(list: List[Int]): Int = ???
+
+  //has a list of lists as input, sums up all elements
+  def sumAll(list: List[List[Int]]): Int = ???
+
+  //returns a list with all elements twice
+  def twiceList(list: List[Int]): List[Int] = ???
+
+}
 
 class Practise3Test extends FunSuite {
+  import Practise3._
 
   test("addToAll") {
     assert(addToAll(List(1, 2, 3), 1) === List(2, 3, 4))

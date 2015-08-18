@@ -1,9 +1,13 @@
-package practise
+package practise.chapter2collections
 
-import practise.chapter2collections.Practise1
-import Practise1._
+object Practise1 { //methods on lists
+  //return all even numbers from the list
+  def allEvenNumbers(list: List[Int]): List[Int] = ???
+}
 
 class Practise1Test extends org.scalatest.FunSuite {
+  import Practise1._
+
   test("allEvenNumbers - none") {
     assert(allEvenNumbers(List()) === List())
   }

@@ -1,10 +1,17 @@
-package practise
+package practise.chapter1basics
 
 import org.scalatest.FunSuite
-import practise.chapter1basics.Practise4
-import Practise4._
+
+object Practise4 {
+  //create a counter that always returns one more than the last time
+  class Counter {
+    def oneMore(): Int = ???
+  }
+
+}
 
 class Practise4Test extends FunSuite {
+  import Practise4._
 
   test("Counter") {
     val c = new Counter
