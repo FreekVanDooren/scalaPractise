@@ -1,4 +1,4 @@
-package practise
+package practise.chapter4patternmatching
 
 object Practise18 {
   //read: https://twitter.github.io/scala_school/basics2.html#match

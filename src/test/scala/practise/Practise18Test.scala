@@ -1,7 +1,8 @@
 package practise
 
 import org.scalatest.FunSuite
-import practise.Practise18._
+import practise.chapter4patternmatching.Practise18
+import Practise18._
 
 class Practise18Test extends FunSuite {
   test("matchInt") {

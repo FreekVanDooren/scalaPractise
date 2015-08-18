@@ -1,4 +1,4 @@
-package practise
+package practise.chapter4patternmatching
 
 object Practise5 {
   case class Singer(name: String)

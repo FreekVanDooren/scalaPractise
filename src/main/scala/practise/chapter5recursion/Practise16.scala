@@ -1,4 +1,4 @@
-package practise
+package practise.chapter5recursion
 
 object Practise16 {
   //hint: recursion

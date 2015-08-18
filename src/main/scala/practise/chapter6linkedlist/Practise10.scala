@@ -1,4 +1,4 @@
-package practise
+package practise.chapter6linkedlist
 
 object Practise10 {
   //Our own implementation of a linked list

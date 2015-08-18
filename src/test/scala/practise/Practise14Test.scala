@@ -1,7 +1,8 @@
 package practise
 
 import org.scalatest.FunSuite
-import practise.Practise14._
+import practise.chapter6linkedlist.Practise14
+import Practise14._
 
 class Practise14Test extends FunSuite {
   test("printList - []") {

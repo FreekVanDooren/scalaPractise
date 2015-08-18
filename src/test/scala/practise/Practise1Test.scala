@@ -1,6 +1,7 @@
 package practise
 
-import practise.Practise1._
+import practise.chapter2collections.Practise1
+import Practise1._
 
 class Practise1Test extends org.scalatest.FunSuite {
   test("allEvenNumbers - none") {

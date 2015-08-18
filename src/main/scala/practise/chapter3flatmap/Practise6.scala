@@ -1,4 +1,4 @@
-package practise
+package practise.chapter3flatmap
 
 object Practise6 {
   //hint: flatmap

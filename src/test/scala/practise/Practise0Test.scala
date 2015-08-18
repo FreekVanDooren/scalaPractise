@@ -1,7 +1,8 @@
 package practise
 
 import org.scalatest.FunSuite
-import practise.Practise0._
+import practise.chapter1basics.Practise0
+import Practise0._
 
 class Practise0Test extends FunSuite {
   test("shouldReturnTrue - should return true") {

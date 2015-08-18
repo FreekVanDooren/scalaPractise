@@ -1,4 +1,4 @@
-package practise
+package practise.chapter6linkedlist
 
 object Practise17 {
   //read: https://twitter.github.io/scala_school/basics2.html#fnobj

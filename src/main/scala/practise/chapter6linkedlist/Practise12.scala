@@ -1,4 +1,4 @@
-package practise
+package practise.chapter6linkedlist
 
 object Practise12 {
   abstract class AbstractLinkedList

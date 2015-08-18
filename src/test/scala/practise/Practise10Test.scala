@@ -1,7 +1,8 @@
 package practise
 
 import org.scalatest.FunSuite
-import practise.Practise10._
+import practise.chapter6linkedlist.Practise10
+import Practise10._
 
 class Practise10Test extends FunSuite {
   val list1 = LinkedList("1", EmptyList)

@@ -1,7 +1,8 @@
 package practise
 
 import org.scalatest.FunSuite
-import practise.Practise7._
+import practise.chapter3flatmap.Practise7
+import Practise7._
 
 class Practise7Test extends FunSuite {
 

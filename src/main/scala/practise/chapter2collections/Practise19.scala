@@ -1,4 +1,4 @@
-package practise
+package practise.chapter2collections
 
 object Practise19 {
   //read: http://www.tutorialspoint.com/scala/scala_lists.htm

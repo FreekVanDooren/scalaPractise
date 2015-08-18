@@ -1,4 +1,4 @@
-package practise
+package practise.chapter6linkedlist
 
 object Practise14 {
   //Now the elements may also be lists

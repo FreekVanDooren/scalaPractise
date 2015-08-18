@@ -1,7 +1,8 @@
 package practise
 
 import org.scalatest.FunSuite
-import practise.Practise13._
+import practise.chapter5recursion.Practise13
+import Practise13._
 
 class Practise13Test extends FunSuite {
   test("sumDigits - 0") {

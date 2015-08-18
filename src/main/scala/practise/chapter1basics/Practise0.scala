@@ -1,4 +1,4 @@
-package practise
+package practise.chapter1basics
 
 //A practise to get comfortable with how this works
 //Run the unit tests in Practise0Test. It will fail because the ???s here are not implemented.

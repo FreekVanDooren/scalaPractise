@@ -1,7 +1,8 @@
 package practise
 
 import org.scalatest.FunSuite
-import practise.Practise19._
+import practise.chapter2collections.Practise19
+import Practise19._
 
 class Practise19Test extends FunSuite {
   test("lists") {

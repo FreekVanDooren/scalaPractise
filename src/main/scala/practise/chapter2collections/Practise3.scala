@@ -1,4 +1,4 @@
-package practise
+package practise.chapter2collections
 
 //hint: https://twitter.github.io/scala_school/collections.html
 //and http://www.scala-lang.org/api/2.10.3/index.html#scala.collection.immutable.List

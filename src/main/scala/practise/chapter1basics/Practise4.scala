@@ -1,4 +1,4 @@
-package practise
+package practise.chapter1basics
 
 object Practise4 {
   //create a counter that always returns one more than the last time

@@ -1,7 +1,8 @@
 package practise
 
 import org.scalatest.FunSuite
-import practise.Practise15._
+import practise.chapter5recursion.Practise15
+import Practise15._
 
 class Practise15Test extends FunSuite {
   test("compress - no compression") {

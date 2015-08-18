@@ -1,4 +1,4 @@
-package practise
+package practise.chapter6linkedlist
 
 object Practise11 {
   //Here we make some syntactic sugar on our list. so we can call list(0) to get the first element
