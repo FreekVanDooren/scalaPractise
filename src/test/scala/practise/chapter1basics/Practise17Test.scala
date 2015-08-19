@@ -1,4 +1,4 @@
-package practise.chapter6linkedlist
+package practise.chapter1basics
 
 import org.scalatest.FunSuite
 

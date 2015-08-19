@@ -3,9 +3,12 @@ package practise.chapter6linkedlist
 import org.scalatest.FunSuite
 
 object Practise11 {
-  //Here we make some syntactic sugar on our list. so we can call list(0) to get the first element
   class IndexOutOfBoundsException extends Exception
   abstract class AbstractLinkedList {
+    //returns the value at 'index', may throw an IndexOutOfBoundsException
+    def atIndex(index: Int): String = ???
+
+    //Here we make some syntactic sugar on our list. so we can call list(0) to get the first element
     //apply is a special method and can be called easier, see test
     def apply(index: Int): String = ???
   }
@@ -19,6 +22,31 @@ class Practise11Test extends FunSuite {
   import Practise11._
 
   val list123 = LinkedList("1", LinkedList("2", LinkedList("3", EmptyList)))
+
+  test("atIndex - on EmptyList") {
+    intercept[IndexOutOfBoundsException] {
+      EmptyList.atIndex(0)
+    }
+  }
+
+  test("atIndex - 0") {
+    assert(list123.atIndex(0) === "1")
+  }
+
+  test("atIndex - 1") {
+    assert(list123.atIndex(1) === "2")
+  }
+
+  test("atIndex - 2") {
+    assert(list123.atIndex(2) === "3")
+  }
+
+  test("atIndex - 3") {
+    intercept[IndexOutOfBoundsException] {
+      EmptyList.atIndex(3)
+    }
+  }
+
 
   test("apply - on EmptyList") {
     intercept[IndexOutOfBoundsException] {
@@ -43,7 +71,4 @@ class Practise11Test extends FunSuite {
       EmptyList(3)
     }
   }
-
-
-
 }
