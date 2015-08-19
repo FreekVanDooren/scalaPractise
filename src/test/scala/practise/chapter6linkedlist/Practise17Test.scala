@@ -1,10 +1,17 @@
-package practise
+package practise.chapter6linkedlist
 
 import org.scalatest.FunSuite
-import practise.chapter6linkedlist.Practise17
-import Practise17._
+
+object Practise17 {
+  //read: https://twitter.github.io/scala_school/basics2.html#fnobj
+  def function1: Function1[Int, Int] = ???
+  def listOfFunctions: List[Function1[Int, Int]] = ???
+
+}
 
 class Practise17Test extends FunSuite {
+  import Practise17._
+
   test("function1") {
     assert(function1(0) === 1)
     assert(function1(1) === 2)

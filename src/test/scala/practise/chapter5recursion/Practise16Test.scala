@@ -1,10 +1,17 @@
-package practise
+package practise.chapter5recursion
 
 import org.scalatest.FunSuite
-import practise.chapter5recursion.Practise16
-import Practise16._
+
+object Practise16 {
+  //hint: recursion
+  //best make a helper method to do the recursion in
+  def decompress(s: String): String = ???
+
+}
 
 class Practise16Test extends FunSuite {
+  import Practise16._
+
   test("decompress - no compression") {
     assert(decompress("") === "")
     assert(decompress("a") === "a")

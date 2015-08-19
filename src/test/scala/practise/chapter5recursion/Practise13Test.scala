@@ -1,10 +1,18 @@
-package practise
+package practise.chapter5recursion
 
 import org.scalatest.FunSuite
-import practise.chapter5recursion.Practise13
-import Practise13._
+
+object Practise13 {
+  //Given a non-negative int n, return the sum of its digits.
+  //hint: modulo (%) and recursion
+
+  def sumDigits(x: Int): Int = ???
+
+}
 
 class Practise13Test extends FunSuite {
+  import Practise13._
+
   test("sumDigits - 0") {
     assert(sumDigits(0) === 0)
   }

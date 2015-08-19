@@ -1,5 +1,7 @@
 package practise.chapter6linkedlist
 
+import org.scalatest.FunSuite
+
 object Practise12 {
   abstract class AbstractLinkedList
   case object EmptyList extends AbstractLinkedList
@@ -11,4 +13,25 @@ object Practise12 {
   //hint: http://www.tutorialspoint.com/scala/functions_variable_arguments.htm
   def createLinkedList(values: String*): AbstractLinkedList = ???
 
+}
+
+class Practise12Test extends FunSuite {
+  import Practise12._
+
+  test("EmptyList") {
+    assert(createLinkedList() === EmptyList)
+  }
+
+  test("1") {
+    assert(createLinkedList("1") === LinkedList("1", EmptyList))
+  }
+
+  test("12") {
+    assert(createLinkedList("1", "2") === LinkedList("1", LinkedList("2", EmptyList)))
+  }
+
+  test("123") {
+    val list123: LinkedList = LinkedList("1", LinkedList("2", LinkedList("3", EmptyList)))
+    assert(createLinkedList("1", "2", "3") === list123)
+  }
 }

@@ -1,10 +1,25 @@
-package practise
+package practise.chapter6linkedlist
 
 import org.scalatest.FunSuite
-import practise.chapter6linkedlist.Practise10
-import Practise10._
+
+object Practise10 {
+  //Our own implementation of a linked list
+  abstract class AbstractLinkedList
+  case object EmptyList extends AbstractLinkedList
+  case class LinkedList(value: String, tail: AbstractLinkedList) extends AbstractLinkedList
+
+  //hint: recursion
+  def map(l: AbstractLinkedList, function: String => String): AbstractLinkedList = ???
+
+  def addLists(list1: AbstractLinkedList, list2: AbstractLinkedList): AbstractLinkedList = ???
+
+  def flatMap(l: AbstractLinkedList, function: String => AbstractLinkedList): AbstractLinkedList = ???
+
+}
 
 class Practise10Test extends FunSuite {
+  import Practise10._
+
   val list1 = LinkedList("1", EmptyList)
   val list123 = LinkedList("1", LinkedList("2", LinkedList("3", EmptyList)))
 

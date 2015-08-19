@@ -1,10 +1,19 @@
-package practise
+package practise.chapter5recursion
 
 import org.scalatest.FunSuite
-import practise.chapter5recursion.Practise15
-import Practise15._
+
+object Practise15 {
+  //hint: recursion
+  //string.toList makes a list of characters
+  //list.mkString makes a String from a List
+  //best make a helper method to do the recursion in
+  def compress(s: String): String = ???
+
+}
 
 class Practise15Test extends FunSuite {
+  import Practise15._
+
   test("compress - no compression") {
     assert(compress("") === "")
     assert(compress("a") === "a")

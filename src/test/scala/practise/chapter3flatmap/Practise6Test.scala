@@ -1,10 +1,22 @@
-package practise
+package practise.chapter3flatmap
 
 import org.scalatest.FunSuite
-import practise.chapter3flatmap.Practise6
-import Practise6._
+
+object Practise6 {
+  //hint: flatmap
+
+  //make one list with all words in the sentences
+  def allWordsIn(sentences: List[String]): List[String] = ???
+
+  //hint: List.fill
+  def repeatWord(times: Int, word: String): List[String] = ???
+  def repeatWords(input: List[(Int, String)]): List[String] = ???
+
+
+}
 
 class Practise6Test extends FunSuite {
+  import Practise6._
 
   test("allWordsIn") {
     assert(allWordsIn(List("bla", "bla")) === List("bla", "bla"))

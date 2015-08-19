@@ -1,10 +1,21 @@
-package practise
+package practise.chapter6linkedlist
 
 import org.scalatest.FunSuite
-import practise.chapter6linkedlist.Practise14
-import Practise14._
+
+object Practise14 {
+  //Now the elements may also be lists
+  abstract class AbstractLinkedList
+  case object EmptyList extends AbstractLinkedList
+  case class LinkedList(value: Any, tail: AbstractLinkedList) extends AbstractLinkedList
+
+  def printList(list: AbstractLinkedList): String = ???
+
+
+}
 
 class Practise14Test extends FunSuite {
+  import Practise14._
+
   test("printList - []") {
     assert(printList(EmptyList) === "[]")
   }
