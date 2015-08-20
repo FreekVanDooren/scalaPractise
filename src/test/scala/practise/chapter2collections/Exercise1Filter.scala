@@ -1,12 +1,13 @@
 package practise.chapter2collections
 
-object Practise1 { //methods on lists
-  //return all even numbers from the list
-  def allEvenNumbers(list: List[Int]): List[Int] = ???
-}
-
-class Practise1Test extends org.scalatest.FunSuite {
-  import Practise1._
+//read https://twitter.github.io/scala_school/collections.html
+//hint: collections have many nice methods, like filter.
+class Exercise1Filter extends org.scalatest.FunSuite {
+  object Exercise {
+    //return all even numbers from the list
+    def allEvenNumbers(list: List[Int]): List[Int] = ???
+  }
+  import Exercise._
 
   test("allEvenNumbers - none") {
     assert(allEvenNumbers(List()) === List())

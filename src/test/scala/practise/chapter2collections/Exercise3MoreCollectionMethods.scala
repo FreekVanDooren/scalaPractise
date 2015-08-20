@@ -4,25 +4,29 @@ import org.scalatest.FunSuite
 
 //hint: https://twitter.github.io/scala_school/collections.html
 //and http://www.scala-lang.org/api/2.10.3/index.html#scala.collection.immutable.List
-object Practise3 {
-  def addToAll(list: List[Int], amount: Int): List[Int] = ???
+class Exercise3MoreCollectionMethods extends FunSuite {
+  object Exercise {
+    //Add amount to all elements in list
+    def addToAll(list: List[Int], amount: Int): List[Int] = ???
 
-  def findNegativeNumbers(list: List[Int]): List[Int] = ???
+    //Return the subset of negative numbers
+    def findNegativeNumbers(list: List[Int]): List[Int] = ???
 
-  def firstPositiveNumber(list: List[Int]): Option[Int] = ???
+    //Returns the first Positive number
+    //Or None if there is no positive number
+    def firstPositiveNumber(list: List[Int]): Option[Int] = ???
 
-  def sum(list: List[Int]): Int = ???
+    //Add all elements in list together
+    def sum(list: List[Int]): Int = ???
 
-  //has a list of lists as input, sums up all elements
-  def sumAll(list: List[List[Int]]): Int = ???
+    //has a list of lists as input, sums up all elements
+    def sumAll(list: List[List[Int]]): Int = ???
 
-  //returns a list with all elements twice
-  def twiceList(list: List[Int]): List[Int] = ???
+    //returns a list with all elements twice
+    def twiceList(list: List[Int]): List[Int] = ???
 
-}
-
-class Practise3Test extends FunSuite {
-  import Practise3._
+  }
+  import Exercise._
 
   test("addToAll") {
     assert(addToAll(List(1, 2, 3), 1) === List(2, 3, 4))
@@ -35,8 +39,8 @@ class Practise3Test extends FunSuite {
   }
 
   test("firstPositiveNumber") {
-    assert(firstPositiveNumber(List(1, 2, 3)) === Some(1)) //Notice that it wraps the result in an option
-    assert(firstPositiveNumber(List(-1, -2)) === None)     //Because it may be none
+    assert(firstPositiveNumber(List(1, 2, 3)) === Some(1))
+    assert(firstPositiveNumber(List(-1, -2)) === None)
     assert(firstPositiveNumber(List(-1, -2, 4)) === Some(4))
   }
 

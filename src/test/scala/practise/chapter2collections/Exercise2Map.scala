@@ -2,12 +2,14 @@ package practise.chapter2collections
 
 import org.scalatest.FunSuite
 
-object Practise2 {
-  def map(list: List[Int], method: (Int => Int)): List[Int] = ???
-}
-
-class Practise2Test extends FunSuite {
-  import Practise2._
+class Exercise2Map extends FunSuite {
+  object Exercise {
+    //Two arguments
+    //1. a list of integers
+    //2. a function from Int to Int. Notice the nice syntax.
+    def map(list: List[Int], function: (Int => Int)): List[Int] = ???
+  }
+  import Exercise._
 
   test("map") {
     assert(map(List(1, 2, 3), { _ + 1}) === List(2, 3, 4))
