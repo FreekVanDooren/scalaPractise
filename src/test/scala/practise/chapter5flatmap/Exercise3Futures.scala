@@ -1,4 +1,4 @@
-package practise.chapter3flatmap
+package practise.chapter5flatmap
 
 import org.scalatest.FunSuite
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -14,7 +14,11 @@ class Exercise3Futures extends FunSuite {
     def addFutures(f1: Future[Int], f2: Future[Int]): Future[Int] = ???
 
   }
-  import Exercise._
+  //startAnswer
+  object Answer {
+  }
+  import Answer._
+  //endAnswer
 
   test("addToFuture") {
     val f: Future[Int] = Future { 1 + 1 }

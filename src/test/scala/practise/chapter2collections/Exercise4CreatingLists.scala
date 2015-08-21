@@ -14,9 +14,20 @@ class Exercise4CreatingLists extends FunSuite {
     def oneTwoThree: List[Any] = ???
 
     //You can also use :: for pattern matching
+//    def matchList(list: List[Any]): String = ???
+  }
+  //startAnswer
+  object Answer {
+    def emptyList: List[Any] = Nil
+
+    def twoThree: List[Any] = List(2, 3)
+
+    def oneTwoThree: List[Any] = 1 :: twoThree
+
     def matchList(list: List[Any]): String = ???
   }
-  import Exercise._
+  import Answer._
+  //endAnswer
 
   test("lists") {
     assert(emptyList === Nil)

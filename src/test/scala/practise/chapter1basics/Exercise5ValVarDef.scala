@@ -42,9 +42,48 @@ class Exercise5ValVarDef extends FunSuite {
 
     val test9 = lazyB
     val answer9 = ???
-
   }
-  import Exercise._
+  //startAnswer
+  object Answer {
+    var counter = 1
+
+    val valOne = counter
+    lazy val lazyA = counter
+    lazy val lazyB = counter
+    var varOne = counter
+    def defOne = counter
+
+    val test1 = valOne
+    val answer1 = 1
+
+    val test2 = lazyA
+    val answer2 = 1
+
+    val test3 = varOne
+    val answer3 = 1
+
+    val test4 = defOne
+    val answer4 = 1
+
+    counter = 2
+
+    val test5 = valOne
+    val answer5 = 1
+
+    val test6 = lazyA
+    val answer6 = 1
+
+    val test7 = varOne
+    val answer7 = 1
+
+    val test8 = defOne
+    val answer8 = 2
+
+    val test9 = lazyB
+    val answer9 = 2
+  }
+  import Answer._
+  //endAnswer
 
   test("test1") {
     assert(test1 === answer1)

@@ -1,4 +1,4 @@
-package practise.chapter3flatmap
+package practise.chapter5flatmap
 
 import org.scalatest.FunSuite
 
@@ -15,7 +15,11 @@ class Exercise2Combinations extends FunSuite {
     //Should do the same as combinationsFlatMap
     def combinationsFor(letters: List[String], numbers: List[Int]): List[String] = ???
   }
-  import Exercise._
+  //startAnswer
+  object Answer {
+  }
+  import Answer._
+  //endAnswer
 
   test("combinationsForOneLetter") {
     assert(combinationsForOneLetter("z", List()) === List())

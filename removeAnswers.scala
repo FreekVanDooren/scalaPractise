@@ -11,6 +11,7 @@ def filterStart(lines: List[String]): List[String] = lines match {
 }
 
 def filterMiddle(lines: List[String]): List[String] = lines match {
+  case Nil => throw new RuntimeException("no end to the answer!")
   case "  //endAnswer" :: rest => rest
   case _ :: rest => filterMiddle(rest)
 }

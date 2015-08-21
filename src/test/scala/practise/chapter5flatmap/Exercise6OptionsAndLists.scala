@@ -1,10 +1,10 @@
-package practise.chapter3flatmap
+package practise.chapter5flatmap
 
 import org.scalatest.FunSuite
 
 import scala.util.Try
 
-class Exercise5OptionsAndLists extends FunSuite {
+class Exercise6OptionsAndLists extends FunSuite {
   //Parses an integer. Returns None if it cannot parse.
   def parseInt(s: String): Option[Int] = Try(Some(Integer.parseInt(s))).getOrElse(None)
 

@@ -24,9 +24,23 @@ class Exercise3MoreCollectionMethods extends FunSuite {
 
     //returns a list with all elements twice
     def twiceList(list: List[Int]): List[Int] = ???
-
   }
-  import Exercise._
+  //startAnswer
+  object Answer {
+    def addToAll(list: List[Int], amount: Int): List[Int] = list.map(_ + amount)
+
+    def findNegativeNumbers(list: List[Int]): List[Int] = list.filter(_ < 0)
+
+    def firstPositiveNumber(list: List[Int]): Option[Int] = list.find(_ > 0)
+
+    def sum(list: List[Int]): Int = list.sum
+
+    def sumAll(list: List[List[Int]]): Int = list.flatten.sum
+
+    def twiceList(list: List[Int]): List[Int] = list.flatMap { x => List(x, x) }
+  }
+  import Answer._
+  //endAnswer
 
   test("addToAll") {
     assert(addToAll(List(1, 2, 3), 1) === List(2, 3, 4))

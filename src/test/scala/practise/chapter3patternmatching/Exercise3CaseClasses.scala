@@ -1,4 +1,4 @@
-package practise.chapter4patternmatching
+package practise.chapter3patternmatching
 
 import org.scalatest.FunSuite
 
@@ -10,7 +10,7 @@ object Practise5 {
   def nameOf(o: Object): String = ???
 }
 
-class Practise5Test extends FunSuite {
+class Exercise3CaseClasses extends FunSuite {
   import Practise5._
 
   test("match") {

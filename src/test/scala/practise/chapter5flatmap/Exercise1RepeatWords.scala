@@ -1,4 +1,4 @@
-package practise.chapter3flatmap
+package practise.chapter5flatmap
 
 import org.scalatest.FunSuite
 
@@ -15,7 +15,11 @@ class Exercise1RepeatWords extends FunSuite {
     //repeat all the words in the input list the specified number of times
     def repeatWords(input: List[(Int, String)]): List[String] = ???
   }
-  import Exercise._
+  //startAnswer
+  object Answer {
+  }
+  import Answer._
+  //endAnswer
 
   test("allWordsIn") {
     assert(allWordsIn(List("bla", "bla")) === List("bla", "bla"))

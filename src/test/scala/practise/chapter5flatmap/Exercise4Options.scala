@@ -1,4 +1,4 @@
-package practise.chapter3flatmap
+package practise.chapter5flatmap
 
 import org.scalatest.FunSuite
 
@@ -16,7 +16,7 @@ class Exercise4Options extends FunSuite {
     //use 0 for any option that is None
     def addOptionsWithDefault0(o1: Option[Int], o2: Option[Int]): Int = ???
   }
-//  import Exercise._
+  //startAnswer
   object Answer {
     //add a number, if the option is something
     def addToOption(o: Option[Int], add: Int): Option[Int] = o.map(_ + add)
@@ -31,6 +31,7 @@ class Exercise4Options extends FunSuite {
 
   }
   import Answer._
+  //endAnswer
 
   test("addToOption - None") {
     assert(addToOption(None, 3) === None)
