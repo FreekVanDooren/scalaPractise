@@ -15,7 +15,6 @@ class Exercise4Options extends FunSuite {
 
     //use 0 for any option that is None
     def addOptionsWithDefault0(o1: Option[Int], o2: Option[Int]): Int = ???
-
   }
 //  import Exercise._
   object Answer {
