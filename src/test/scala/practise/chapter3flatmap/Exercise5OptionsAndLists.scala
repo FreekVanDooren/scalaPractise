@@ -5,12 +5,15 @@ import org.scalatest.FunSuite
 import scala.util.Try
 
 class Exercise5OptionsAndLists extends FunSuite {
+  //Parses an integer. Returns None if it cannot parse.
+  def parseInt(s: String): Option[Int] = Try(Some(Integer.parseInt(s))).getOrElse(None)
+
   object Exercise {
+    //hint: flatMap
+    def parseInts(input: List[String]): List[Int] = ???
   }
   //startAnswer
   object Answer {
-    def parseInt(s: String) = Try(Some(Integer.parseInt(s))).getOrElse(None)
-
     //hint: flatMap
     def parseInts(input: List[String]): List[Int] = input.flatMap(parseInt)
   }
