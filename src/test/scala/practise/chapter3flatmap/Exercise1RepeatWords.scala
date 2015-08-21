@@ -2,21 +2,20 @@ package practise.chapter3flatmap
 
 import org.scalatest.FunSuite
 
-object Practise6 {
-  //hint: flatmap
+//read: http://twitter.github.io/effectivescala/#Functional programming-`flatMap`
+class Exercise1RepeatWords extends FunSuite {
+  object Exercise {
+    //make one list with all words in the sentences
+    //hint: String.split
+    def allWordsIn(sentences: List[String]): List[String] = ???
 
-  //make one list with all words in the sentences
-  def allWordsIn(sentences: List[String]): List[String] = ???
+    //hint: List.fill
+    def repeatWord(times: Int, word: String): List[String] = ???
 
-  //hint: List.fill
-  def repeatWord(times: Int, word: String): List[String] = ???
-  def repeatWords(input: List[(Int, String)]): List[String] = ???
-
-
-}
-
-class Practise6Test extends FunSuite {
-  import Practise6._
+    //repeat all the words in the input list the specified number of times
+    def repeatWords(input: List[(Int, String)]): List[String] = ???
+  }
+  import Exercise._
 
   test("allWordsIn") {
     assert(allWordsIn(List("bla", "bla")) === List("bla", "bla"))

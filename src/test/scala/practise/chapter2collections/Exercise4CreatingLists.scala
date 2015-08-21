@@ -6,12 +6,12 @@ import org.scalatest.FunSuite
 //read: http://www.tutorialspoint.com/scala/scala_lists.htm
 class Exercise4CreatingLists extends FunSuite {
   object Exercise {
-    def emptyList: List = ???
+    def emptyList: List[Any] = ???
 
-    def twoThree: List = ???
+    def twoThree: List[Any] = ???
 
     //add a one at the start of twoThree using ::
-    def oneTwoThree: List = ???
+    def oneTwoThree: List[Any] = ???
 
     //You can also use :: for pattern matching
     def matchList(list: List[Any]): String = ???
