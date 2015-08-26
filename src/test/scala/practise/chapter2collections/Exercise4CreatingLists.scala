@@ -12,9 +12,6 @@ class Exercise4CreatingLists extends FunSuite {
 
     //add a one at the start of twoThree using ::
     def oneTwoThree: List[Any] = ???
-
-    //You can also use :: for pattern matching
-//    def matchList(list: List[Any]): String = ???
   }
   //startAnswer
   object Answer {
@@ -23,8 +20,6 @@ class Exercise4CreatingLists extends FunSuite {
     def twoThree: List[Any] = List(2, 3)
 
     def oneTwoThree: List[Any] = 1 :: twoThree
-
-    def matchList(list: List[Any]): String = ???
   }
   import Answer._
   //endAnswer
@@ -34,15 +29,5 @@ class Exercise4CreatingLists extends FunSuite {
     assert(twoThree === List(2, 3))
     assert(oneTwoThree === List(1, 2, 3))
   }
-
-  //TODO: verhuizen naar pattern matching
-  test("matchList") {
-    assert(matchList(Nil) === "empty")
-    assert(matchList(List(1, 2)) === "starts with a number")
-    assert(matchList(List(6, 2)) === "starts with a number")
-    assert(matchList(List("a", 2)) === "starts with a")
-    assert(matchList(List("bla", 2)) === "starts with bla")
-  }
-
 
 }

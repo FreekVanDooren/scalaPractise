@@ -22,7 +22,7 @@ class Exercise3CaseClasses extends FunSuite {
   //endAnswer
 
   test("toppers") {
-    assert(toppers.map(_.name).sameElements(List("Gordon", "René Froger", "Gerard Joling")))
+    assert(toppers.map(_.name) === List("René Froger", "Gordon", "Gerard Joling"))
   }
 
   test("match") {
