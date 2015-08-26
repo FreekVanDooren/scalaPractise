@@ -8,14 +8,15 @@ import scala.concurrent.{Await, Future}
 //hint: map and flatMap work on futures
 class Exercise3Futures extends FunSuite {
   object Exercise {
-
     def addToFuture(f: Future[Int], add: Int): Future[Int] = ???
 
     def addFutures(f1: Future[Int], f2: Future[Int]): Future[Int] = ???
-
   }
   //startAnswer
   object Answer {
+    def addToFuture(f: Future[Int], add: Int): Future[Int] = ???
+
+    def addFutures(f1: Future[Int], f2: Future[Int]): Future[Int] = ???
   }
   import Answer._
   //endAnswer

@@ -22,10 +22,10 @@ class Exercise2Val extends FunSuite {
   //endAnswer
 
   test("one is 1") {
-   assert(one === 1)
+    assert(one === 1)
   }
 
   test("one is an Int") {
-   assert(one.isInstanceOf[Int])
+    assert(one.isInstanceOf[Int])
   }
 }
