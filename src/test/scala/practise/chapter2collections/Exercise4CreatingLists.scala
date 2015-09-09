@@ -12,6 +12,9 @@ class Exercise4CreatingLists extends FunSuite {
 
     //add a one at the start of twoThree using ::
     def oneTwoThree: List[Any] = ???
+
+    //add all these lists together using :::
+    def allTogether: List[Any] = ???
   }
   //startAnswer
   object Answer {
@@ -20,6 +23,8 @@ class Exercise4CreatingLists extends FunSuite {
     def twoThree: List[Any] = List(2, 3)
 
     def oneTwoThree: List[Any] = 1 :: twoThree
+
+    def allTogether: List[Any] = emptyList ::: twoThree ::: oneTwoThree
   }
   import Answer._
   //endAnswer
@@ -28,6 +33,7 @@ class Exercise4CreatingLists extends FunSuite {
     assert(emptyList === Nil)
     assert(twoThree === List(2, 3))
     assert(oneTwoThree === List(1, 2, 3))
+    assert(allTogether === List(2, 3, 1, 2, 3))
   }
 
 }

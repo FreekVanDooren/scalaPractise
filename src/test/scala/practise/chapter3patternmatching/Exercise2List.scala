@@ -3,8 +3,6 @@ package practise.chapter3patternmatching
 import org.scalatest.FunSuite
 
 class Exercise2List extends FunSuite {
-  case class Animal(sound: String)
-  object dog("woof") extends Animal
   object Exercise {
   }
   //startAnswer
@@ -20,8 +18,9 @@ class Exercise2List extends FunSuite {
 
     def matchList(list: List[Any]): String = list match {
       case Nil => "empty"
-      case _ : Integer :: _ => "starts with a number"
-      case s : String :: _ => s"starts with $s"
+      case _ if list.size > 10 => "a lot of elements"
+      case (_ : Int) :: _ => "starts with a number"
+      case (s : String) :: _ => s"starts with $s"
     }
   }
   import Answer._
@@ -41,10 +40,15 @@ class Exercise2List extends FunSuite {
 
   test("matchList") {
     assert(matchList(Nil) === "empty")
+    assert(matchList(List(4)) === "starts with a number")
     assert(matchList(List(1, 2)) === "starts with a number")
-    assert(matchList(List(6, 2)) === "starts with a number")
-    assert(matchList(List("a", 2)) === "starts with a")
+    assert(matchList(List(6, 2, 2)) === "starts with a number")
+    assert(matchList(List("a", 2, 3)) === "starts with a")
     assert(matchList(List("bla", 2)) === "starts with bla")
+  }
+
+  test("matchList with a lot of elements") {
+    assert(matchList(List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)) === "a lot of elements")
   }
 
 
