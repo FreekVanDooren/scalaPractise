@@ -3,6 +3,7 @@ package practise.chapter3patternmatching
 import org.scalatest.FunSuite
 
 //read https://twitter.github.io/scala_school/basics2.html#match
+//and maybe https://kerflyn.wordpress.com/2011/02/14/playing-with-scalas-pattern-matching/
 class Exercise1Numbers extends FunSuite {
   object Exercise {
     def matchInt(number: Int): String = ???
