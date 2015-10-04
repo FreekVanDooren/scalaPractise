@@ -2,19 +2,34 @@ package practise.chapter6linkedlist
 
 import org.scalatest.FunSuite
 
-object Practise14 {
-  //Now the elements may also be lists
+class Exercise4Print extends FunSuite {
+  //Notice that the type of value is now Any, so it can be anything, even another LinkedList
   abstract class AbstractLinkedList
   case object EmptyList extends AbstractLinkedList
   case class LinkedList(value: Any, tail: AbstractLinkedList) extends AbstractLinkedList
 
-  def printList(list: AbstractLinkedList): String = ???
+  object Exercise {
+    def printList(list: AbstractLinkedList): String = ???
+  }
+  //startAnswer
+  object Answer {
+    def printList(list: AbstractLinkedList): String = {
+      "[" + printList1(list) + "]"
+    }
 
+    def printList1(list: AbstractLinkedList): String = list match {
+      case EmptyList => ""
+      case LinkedList(value, EmptyList) => print1(value)
+      case LinkedList(value, rest) => print1(value) + "," + printList1(rest)
+    }
 
-}
-
-class Practise14Test extends FunSuite {
-  import Practise14._
+    def print1(x: Any) = x match {
+      case list: AbstractLinkedList => printList(list)
+      case value => value.toString
+    }
+  }
+  import Answer._
+  //endAnswer
 
   test("printList - []") {
     assert(printList(EmptyList) === "[]")

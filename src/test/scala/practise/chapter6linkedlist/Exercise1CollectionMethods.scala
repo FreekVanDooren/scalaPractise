@@ -2,26 +2,59 @@ package practise.chapter6linkedlist
 
 import org.scalatest.FunSuite
 
-object Practise10 {
+class Exercise1CollectionMethods extends FunSuite {
   //Our own implementation of a linked list
   abstract class AbstractLinkedList
   case object EmptyList extends AbstractLinkedList
   case class LinkedList(value: String, tail: AbstractLinkedList) extends AbstractLinkedList
 
-  //hint: recursion
-  def map(l: AbstractLinkedList, function: String => String): AbstractLinkedList = ???
+  object Exercise {
+    //hints: pattern matching and recursion
+    //maybe http://alvinalexander.com/scala/scala-unreachable-code-due-to-variable-pattern-message
+    def listContains(list: AbstractLinkedList, value: String): Boolean = ???
 
-  def addLists(list1: AbstractLinkedList, list2: AbstractLinkedList): AbstractLinkedList = ???
+    def map(list: AbstractLinkedList, function: String => String): AbstractLinkedList = ???
 
-  def flatMap(l: AbstractLinkedList, function: String => AbstractLinkedList): AbstractLinkedList = ???
+    def addLists(list1: AbstractLinkedList, list2: AbstractLinkedList): AbstractLinkedList = ???
 
-}
+    def flatMap(list: AbstractLinkedList, function: String => AbstractLinkedList): AbstractLinkedList = ???
+  }
+  //startAnswer
+  object Answer {
+    def listContains(list: AbstractLinkedList, value: String): Boolean = list match {
+      case EmptyList => false
+      case LinkedList(`value`, tail) => true 
+      case LinkedList(_, tail) => listContains(tail, value) 
+    }
 
-class Practise10Test extends FunSuite {
-  import Practise10._
+    def map(list: AbstractLinkedList, function: String => String): AbstractLinkedList = list match {
+      case EmptyList => EmptyList
+      case LinkedList(value, tail) => LinkedList(function(value), map(tail, function))
+    }
+
+    def addLists(list1: AbstractLinkedList, list2: AbstractLinkedList): AbstractLinkedList = list1 match {
+      case EmptyList => list2
+      case LinkedList(value, tail) => LinkedList(value, addLists(tail, list2))
+    }
+
+    def flatMap(list: AbstractLinkedList, function: String => AbstractLinkedList): AbstractLinkedList = ???
+  }
+  import Answer._
+  //endAnswer
 
   val list1 = LinkedList("1", EmptyList)
   val list123 = LinkedList("1", LinkedList("2", LinkedList("3", EmptyList)))
+
+  test("listContains - emptyList") {
+    assert(!listContains(EmptyList, "1"))
+  }
+
+  test("listContains - (1, 2)") {
+    val list = LinkedList("1", LinkedList("2", EmptyList))
+    assert(listContains(list, "1"))
+    assert(listContains(list, "2"))
+    assert(!listContains(list, "3"))
+  }
 
   test("map - empty") {
     assert(map(EmptyList, { s => s }) === EmptyList)
