@@ -25,6 +25,4 @@ class Exercise1Intro extends FunSuite {
   test("shouldReturnTrue - should return true") {
     assert(shouldReturnTrue === true)
   }
-
-
 }
