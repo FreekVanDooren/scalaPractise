@@ -1,4 +1,4 @@
-package practise.chapter8implicit
+package practise.chapter10implicit
 
 //Read http://docs.scala-lang.org/tutorials/FAQ/finding-implicits.html
 class Exercise1ImplicitParameters extends org.scalatest.FunSuite {

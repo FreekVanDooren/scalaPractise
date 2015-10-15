@@ -1,4 +1,4 @@
-package practise.chapter7stream
+package practise.chapter9stream
 
 //Read http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.Stream
 class Exercise1InfiniteStream extends org.scalatest.FunSuite {

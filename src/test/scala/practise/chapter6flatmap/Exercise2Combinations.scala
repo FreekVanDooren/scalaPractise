@@ -1,4 +1,4 @@
-package practise.chapter5flatmap
+package practise.chapter6flatmap
 
 import org.scalatest.FunSuite
 

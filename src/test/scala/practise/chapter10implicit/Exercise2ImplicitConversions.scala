@@ -1,4 +1,4 @@
-package practise.chapter8implicit
+package practise.chapter10implicit
 
 //Read http://docs.scala-lang.org/overviews/core/implicit-classes.html
 class Exercise2ImplicitConversions extends org.scalatest.FunSuite {

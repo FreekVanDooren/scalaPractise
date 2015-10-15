@@ -7,10 +7,14 @@ import org.scalatest.FunSuite
 //Notice that functions have a type and we can treat them as objects
 class Exercise8FunctionParameter extends FunSuite {
   object Exercise {
+    def doTwice(function: => Unit) = ???
   }
   //startAnswer
   object Answer {
-    def doTwice(function: => Unit) = ???
+    def doTwice(function: => Unit) = {
+      function
+      function
+    }
   }
   import Answer._
   //endAnswer

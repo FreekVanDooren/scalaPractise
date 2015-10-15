@@ -1,4 +1,4 @@
-package practise.chapter8implicit
+package practise.chapter10implicit
 
 //Read http://docs.scala-lang.org/overviews/collections/conversions-between-java-and-scala-collections.html
 class Exercise4Javaconversions extends org.scalatest.FunSuite {

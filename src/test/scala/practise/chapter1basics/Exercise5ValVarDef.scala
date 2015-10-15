@@ -4,6 +4,7 @@ import org.scalatest.FunSuite
 
 //Lazy val will be evaluated once, when it's needed for the first time
 //Here we see the differences between val, lazy val, var and def.
+//Try to predict what the values will be at these points
 class Exercise5ValVarDef extends FunSuite {
   object Exercise {
     var counter = 1

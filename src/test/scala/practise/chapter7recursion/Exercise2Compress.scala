@@ -1,4 +1,4 @@
-package practise.chapter5recursion
+package practise.chapter7recursion
 
 import org.scalatest.FunSuite
 

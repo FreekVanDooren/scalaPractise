@@ -1,4 +1,4 @@
-package practise.chapter7stream
+package practise.chapter9stream
 
 class Exercise2Primes extends org.scalatest.FunSuite {
   object Exercise {
