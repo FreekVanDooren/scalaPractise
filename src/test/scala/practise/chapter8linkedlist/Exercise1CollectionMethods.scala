@@ -37,7 +37,10 @@ class Exercise1CollectionMethods extends FunSuite {
       case LinkedList(value, tail) => LinkedList(value, addLists(tail, list2))
     }
 
-    def flatMap(list: AbstractLinkedList, function: String => AbstractLinkedList): AbstractLinkedList = ???
+    def flatMap(list: AbstractLinkedList, function: String => AbstractLinkedList): AbstractLinkedList = list match {
+      case EmptyList => EmptyList
+      case LinkedList(value, tail) => addLists(function(value), flatMap(tail, function))
+    }
   }
   import Answer._
   //endAnswer

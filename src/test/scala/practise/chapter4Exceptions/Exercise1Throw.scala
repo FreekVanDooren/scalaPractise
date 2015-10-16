@@ -2,17 +2,16 @@ package practise.chapter4Exceptions
 
 import org.scalatest.FunSuite
 
-//TODO
 //read http://www.tutorialspoint.com/scala/scala_exception_handling.htm
 class Exercise1Throw extends FunSuite {
   class TooHighException extends Exception
 
   object Exercise {
+    //throws a TooHighException if i>10
+    def double(i: Int): Int = ???
   }
   //startAnswer
   object Answer {
-
-    //throws a TooHighException if i>10
     def double(i: Int): Int = {
       if (i > 10) throw new TooHighException
       2 * i

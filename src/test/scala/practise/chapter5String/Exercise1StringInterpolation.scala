@@ -3,6 +3,8 @@ package practise.chapter5String
 //Read http://docs.scala-lang.org/overviews/core/string-interpolation.html
 class Exercise1StringInterpolation extends org.scalatest.FunSuite {
   object Exercise {
+    def hello(name: String): String = ???
+    def plus(i1: Int, i2: Int): String = ???
   }
   //startAnswer
   object Answer {

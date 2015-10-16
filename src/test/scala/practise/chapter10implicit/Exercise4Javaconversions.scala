@@ -4,13 +4,14 @@ package practise.chapter10implicit
 class Exercise4Javaconversions extends org.scalatest.FunSuite {
   object Exercise {
     //Use scala.collection.JavaConversions to automatically change java lists to scala
-    //Then return only the letters
-    def letters(javaList: java.util.List[String]) = ???
+    //Then return only the strings with length 1
+    //hint: toList
+    def letters(javaList: java.util.List[String]): List[String] = ???
   }
   //startAnswer
   object Answer {
     import scala.collection.JavaConversions._
-    def letters(javaList: java.util.List[String]) = javaList.filter { _.length == 1 }
+    def letters(javaList: java.util.List[String]): List[String] = javaList.toList.filter { _.length == 1 }
   }
   import Answer._
   //endAnswer

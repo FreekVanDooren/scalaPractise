@@ -12,18 +12,21 @@ class Exercise5Option extends FunSuite {
   javaMap.put(2, 2)
 
   object Exercise {
-  }
-  //startAnswer
-  object Answer {
     //find the first even number in a list of numbers
-    def firstEven(list: List[Int]): Option[Int] = list.find(_ % 2 == 0)
+    def firstEven(list: List[Int]): Option[Int] = ???
 
     //find the first even number in a list of numbers and half it
-    def halfFirstEven(list: List[Int]): Option[Int] = firstEven(list).map(_ / 2)
+    def halfFirstEven(list: List[Int]): Option[Int] = ???
 
     //Java libraries may return null.
     //Using null is not the Scala way. We want to catch "nullpointer errors" at compile time.
     //So call javaMap.get and transform the result into an Option
+    def javaLibraryWrapper(i: Int): Option[Int] = ???
+  }
+  //startAnswer
+  object Answer {
+    def firstEven(list: List[Int]): Option[Int] = list.find(_ % 2 == 0)
+    def halfFirstEven(list: List[Int]): Option[Int] = firstEven(list).map(_ / 2)
     def javaLibraryWrapper(i: Int): Option[Int] = Option(javaMap.get(i))
   }
   import Answer._

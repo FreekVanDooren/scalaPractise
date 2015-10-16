@@ -2,18 +2,17 @@ package practise.chapter4Exceptions
 
 import org.scalatest.FunSuite
 
-//TODO
 class Exercise2Catch extends FunSuite {
-  //100 is pretty high, should be close enough to infinity
+  //100 is pretty high, this should be close enough to infinity
   val infinity: Int = 100
 
   object Exercise {
+    //calculates a/b
+    //Will return infinity instead of ArithmeticException
+    def divide(a: Int, b: Int): Int = ???
   }
   //startAnswer
   object Answer {
-
-    //calculates a/b
-    //Will return infinity instead of ArithmeticException
     def divide(a: Int, b: Int): Int = {
       try {
         a / b
