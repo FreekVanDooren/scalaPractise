@@ -7,12 +7,15 @@ class Exercise3CaseClasses extends FunSuite {
   case class Programmer(firstName: String)
 
   object Exercise {
+    def toppers: List[Singer] = ???
+
+    //hint: use match/case
+    def nameOf(o: Object): String = ???
   }
   //startAnswer
   object Answer {
     def toppers: List[Singer] = List(Singer("René Froger"), Singer("Gordon"), Singer("Gerard Joling"))
 
-    //hint: use match/case
     def nameOf(o: Object): String = o match {
       case Singer(name) => name
       case Programmer(name) => name

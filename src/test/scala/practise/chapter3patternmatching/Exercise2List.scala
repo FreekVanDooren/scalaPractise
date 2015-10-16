@@ -4,15 +4,21 @@ import org.scalatest.FunSuite
 
 class Exercise2List extends FunSuite {
   object Exercise {
+    //try to match with ::
+    def firstElement(list: List[Int]): Int = ???
+
+    def first2Elements(list: List[Int]): List[Int] = ???
+
+    def matchList(list: List[Any]): String = ???
   }
   //startAnswer
   object Answer {
     //try to match with ::
-    def firstElement(list: List[Int]) = list match {
+    def firstElement(list: List[Int]): Int = list match {
       case first :: _ => first
     }
 
-    def first2Elements(list: List[Int]) = list match {
+    def first2Elements(list: List[Int]): List[Int] = list match {
       case first :: second :: _ => List(first, second)
     }
 
