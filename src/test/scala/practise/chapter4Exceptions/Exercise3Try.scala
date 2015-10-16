@@ -2,7 +2,10 @@ package practise.chapter4Exceptions
 
 import org.scalatest.FunSuite
 
-//TODO
+import scala.util.{Failure, Success, Try}
+
+//Here we use the Try class
+//read http://danielwestheide.com/blog/2012/12/26/the-neophytes-guide-to-scala-part-6-error-handling-with-try.html
 class Exercise3Try extends FunSuite {
   //method that may throw an exception
   class TooHighException extends Exception
@@ -12,28 +15,19 @@ class Exercise3Try extends FunSuite {
   }
 
   object Exercise {
-    //hint: flatMap
-    def parseInts(input: List[String]): List[Int] = ???
   }
   //startAnswer
   object Answer {
-    //hint: flatMap
-//    def parseInts(input: List[String]): List[Int] = input.flatMap(parseInt)
+    def tryDouble(i: Int): Try[Int] = Try(double(i))
   }
   import Answer._
   //endAnswer
 
-//  test("parseInts - None") {
-//    assert(parseInts(Nil) === Nil)
-//  }
-//
-//  test("parseInts - 1, 2, 3") {
-//    assert(parseInts(List("1", "2", "3")) === List(1, 2, 3))
-//  }
-//
-//  test("parseInts - a, 1, w") {
-//    assert(parseInts(List("a", "1", "w")) === List(1))
-//  }
+  test("tryDouble") {
+    assert(tryDouble(1).isSuccess)
+    assert(tryDouble(1) === Success(2))
+    assert(tryDouble(11).isFailure)
+  }
 
 
 }
