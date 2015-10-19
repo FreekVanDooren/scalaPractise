@@ -9,12 +9,7 @@ class Exercise2Map extends FunSuite {
     //2. a function from Int to Int. Notice the nice syntax.
     def map(list: List[Int], function: (Int => Int)): List[Int] = ???
   }
-  //startAnswer
-  object Answer {
-    def map(list: List[Int], function: (Int => Int)): List[Int] = list.map(function)
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("map") {
     assert(map(List(1, 2, 3), { _ + 1}) === List(2, 3, 4))

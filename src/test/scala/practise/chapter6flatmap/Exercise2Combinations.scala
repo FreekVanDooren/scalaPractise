@@ -15,19 +15,7 @@ class Exercise2Combinations extends FunSuite {
     //Should do the same as combinationsFlatMap
     def combinationsFor(letters: List[String], numbers: List[Int]): List[String] = ???
   }
-  //startAnswer
-  object Answer {
-    def combinationsForOneLetter(letter: String, numbers: List[Int]): List[String] = numbers.map { letter + _ }
-
-    def combinationsFlatMap(letters: List[String], numbers: List[Int]): List[String] = letters.flatMap { combinationsForOneLetter(_, numbers) }
-
-    def combinationsFor(letters: List[String], numbers: List[Int]): List[String] = for {
-      letter <- letters
-      number <- numbers
-    } yield letter + number
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("combinationsForOneLetter") {
     assert(combinationsForOneLetter("z", List()) === List())

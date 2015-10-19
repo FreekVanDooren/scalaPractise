@@ -9,15 +9,7 @@ class Exercise8FunctionParameter extends FunSuite {
   object Exercise {
     def doTwice(function: => Unit) = ???
   }
-  //startAnswer
-  object Answer {
-    def doTwice(function: => Unit) = {
-      function
-      function
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("twice - anonymous method") {
     var x = 0

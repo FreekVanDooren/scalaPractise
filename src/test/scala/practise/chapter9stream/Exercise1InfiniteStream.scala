@@ -10,16 +10,7 @@ class Exercise1InfiniteStream extends org.scalatest.FunSuite {
     val evenNumbers1: Stream[Int] = ???
     val evenNumbers2: Stream[Int] = ???
   }
-  //startAnswer
-  object Answer {
-    val allPositiveNumbers: Stream[Int] = numbersFrom(1)
-    def numbersFrom(a: Int): Stream[Int] = a #:: numbersFrom(a + 1)
-
-    val evenNumbers1: Stream[Int] = allPositiveNumbers.map { _ * 2 }
-    val evenNumbers2: Stream[Int] = allPositiveNumbers.filter { _ % 2 == 0 }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("allPositiveNumbers - first 5") {
     assert(allPositiveNumbers.take(5).toList === List(1, 2, 3, 4, 5))

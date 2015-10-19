@@ -19,31 +19,7 @@ class Exercise1CollectionMethods extends FunSuite {
 
     def flatMap(list: AbstractLinkedList, function: String => AbstractLinkedList): AbstractLinkedList = ???
   }
-  //startAnswer
-  object Answer {
-    def listContains(list: AbstractLinkedList, value: String): Boolean = list match {
-      case EmptyList => false
-      case LinkedList(`value`, tail) => true 
-      case LinkedList(_, tail) => listContains(tail, value) 
-    }
-
-    def map(list: AbstractLinkedList, function: String => String): AbstractLinkedList = list match {
-      case EmptyList => EmptyList
-      case LinkedList(value, tail) => LinkedList(function(value), map(tail, function))
-    }
-
-    def addLists(list1: AbstractLinkedList, list2: AbstractLinkedList): AbstractLinkedList = list1 match {
-      case EmptyList => list2
-      case LinkedList(value, tail) => LinkedList(value, addLists(tail, list2))
-    }
-
-    def flatMap(list: AbstractLinkedList, function: String => AbstractLinkedList): AbstractLinkedList = list match {
-      case EmptyList => EmptyList
-      case LinkedList(value, tail) => addLists(function(value), flatMap(tail, function))
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   val list1 = LinkedList("1", EmptyList)
   val list123 = LinkedList("1", LinkedList("2", LinkedList("3", EmptyList)))

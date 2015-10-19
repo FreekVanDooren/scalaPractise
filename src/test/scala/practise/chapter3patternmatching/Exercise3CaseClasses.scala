@@ -12,17 +12,7 @@ class Exercise3CaseClasses extends FunSuite {
     //hint: use match/case
     def nameOf(o: Object): String = ???
   }
-  //startAnswer
-  object Answer {
-    def toppers: List[Singer] = List(Singer("René Froger"), Singer("Gordon"), Singer("Gerard Joling"))
-
-    def nameOf(o: Object): String = o match {
-      case Singer(name) => name
-      case Programmer(name) => name
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("toppers") {
     assert(toppers.map(_.name) === List("René Froger", "Gordon", "Gerard Joling"))

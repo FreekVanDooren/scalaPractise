@@ -10,12 +10,7 @@ class Exercise1GoldbachConjecture extends org.scalatest.FunSuite {
   object Exercise {
     def goldbach(i: Int): (Int, Int) = ???
   }
-  //startAnswer
-  object Answer {
-    def goldbach(i: Int): (Int, Int) = ???
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("goldbach") {
     assert(goldbach(4) === (2, 2))

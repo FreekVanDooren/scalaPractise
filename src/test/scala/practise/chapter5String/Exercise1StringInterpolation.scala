@@ -6,13 +6,7 @@ class Exercise1StringInterpolation extends org.scalatest.FunSuite {
     def hello(name: String): String = ???
     def plus(i1: Int, i2: Int): String = ???
   }
-  //startAnswer
-  object Answer {
-    def hello(name: String): String = s"Hello $name"
-    def plus(i1: Int, i2: Int): String = s"$i1 + $i2 = ${i1 + i2}"
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("Hello World") {
     assert(hello("World") === "Hello World")

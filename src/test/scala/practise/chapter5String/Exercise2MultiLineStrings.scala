@@ -5,15 +5,7 @@ class Exercise2MultiLineStrings extends org.scalatest.FunSuite {
   object Exercise {
     val story: String = ???
   }
-  //startAnswer
-  object Answer {
-    val story: String =
-      """bla
-        |die
-        |bla""".stripMargin
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   def countLines(s: String) = s.split("\n").size
   def isLetter(c: Char) = c >= 'A' && c<= 'z'

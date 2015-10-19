@@ -7,13 +7,7 @@ class Exercise3Telephone extends org.scalatest.FunSuite {
     def textToKeypresses(text: String): List[Int] = ???
     def keypressesToText(keys: List[Int]): String = ???
    }
-  //startAnswer
-  object Answer {
-    def textToKeypresses(text: String): List[Int] = ???
-    def keypressesToText(keys: List[Int]): String = ???
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("textToKeypresses") {
     assert(textToKeypresses("a") === List(2))

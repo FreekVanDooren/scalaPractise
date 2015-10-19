@@ -15,12 +15,7 @@ class Exercise1Intro extends FunSuite {
   }
   //We could use Exercise.shouldReturnTrue.
   //This import makes it easier so we can just use shouldReturnTrue.
-  //startAnswer
-  object Answer {
-    def shouldReturnTrue: Boolean = true
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("shouldReturnTrue - should return true") {
     assert(shouldReturnTrue === true)

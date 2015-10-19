@@ -9,16 +9,7 @@ class Exercise1ImplicitParameters extends org.scalatest.FunSuite {
     //call that method
     def helloWorld: String = ???
   }
-  //startAnswer
-  object Answer {
-    def hello(implicit name: String): String = s"Hello $name"
-    def helloWorld: String = {
-      implicit val world = "World"
-      hello
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("Hello Scala") {
     implicit val scala = "Scala"

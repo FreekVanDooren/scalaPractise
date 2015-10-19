@@ -7,12 +7,7 @@ class Exercise1Filter extends org.scalatest.FunSuite {
     //return all even numbers from the list
     def allEvenNumbers(list: List[Int]): List[Int] = ???
   }
-  //startAnswer
-  object Answer {
-    def allEvenNumbers(list: List[Int]): List[Int] = list.filter(_ % 2 == 0)
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("allEvenNumbers - none") {
     assert(allEvenNumbers(List()) === List())

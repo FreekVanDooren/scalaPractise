@@ -16,27 +16,7 @@ class Exercise2AtIndex extends FunSuite {
     case object EmptyList extends AbstractLinkedList
     case class LinkedList(value: String, tail: AbstractLinkedList) extends AbstractLinkedList
   }
-  //startAnswer
-  object Answer {
-    class IndexOutOfBoundsException extends Exception
-    abstract class AbstractLinkedList {
-      def atIndex(index: Int): String
-      def apply(index: Int): String = atIndex(index)
-    }
-    case object EmptyList extends AbstractLinkedList {
-      override def atIndex(index: Int): String = {
-        throw new IndexOutOfBoundsException
-      }
-    }
-    case class LinkedList(value: String, tail: AbstractLinkedList) extends AbstractLinkedList {
-      override def atIndex(index: Int): String = {
-        if (index == 0) value
-        else tail.atIndex(index - 1)
-      }
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   val list123 = LinkedList("1", LinkedList("2", LinkedList("3", EmptyList)))
 

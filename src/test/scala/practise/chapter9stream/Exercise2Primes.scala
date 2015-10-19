@@ -6,12 +6,7 @@ class Exercise2Primes extends org.scalatest.FunSuite {
     //hint: 0 and 1 are not primes
     val primes: Stream[Int] = ???
   }
-  //startAnswer
-  object Answer {
-    val primes: Stream[Int] = ???
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("primes - first 5") {
     assert(primes.take(5).toList === List(2, 3, 5, 7, 11))

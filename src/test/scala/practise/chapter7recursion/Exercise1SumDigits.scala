@@ -9,15 +9,7 @@ class Exercise1SumDigits extends FunSuite {
     //As always with recursion, think about the endcase(s) and decide if you want to work forward or backward.
     def sumDigits(x: Int): Int = ???
   }
-  //startAnswer
-  object Answer {
-    def sumDigits(x: Int): Int = {
-      if (x == 0) 0
-      else x % 10 + sumDigits(x / 10)
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("sumDigits - 0") {
     assert(sumDigits(0) === 0)

@@ -14,12 +14,7 @@ class Exercise2Val extends FunSuite {
     //You can't reassign an immutable variable. This won't compile.
     //one = 2
   }
-  //startAnswer
-  object Answer {
-    val one: Int = 1
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("one is 1") {
     assert(one === 1)

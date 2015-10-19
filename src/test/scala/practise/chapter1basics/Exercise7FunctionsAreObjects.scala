@@ -11,14 +11,7 @@ class Exercise7FunctionsAreObjects extends FunSuite {
     def function2 = ???
     def listOfFunctions: List[Function1[Int, Int]] = List(function1, function2)
   }
-  //startAnswer
-  object Answer {
-    def function1: Function1[Int, Int] = { _ + 1 }
-    def function2 = { x: Int => x + 2 }
-    def listOfFunctions: List[Function1[Int, Int]] = List(function1, function2)
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("function1") {
     assert(function1(0) === 1)

@@ -8,13 +8,7 @@ class Exercise4Javaconversions extends org.scalatest.FunSuite {
     //hint: toList
     def letters(javaList: java.util.List[String]): List[String] = ???
   }
-  //startAnswer
-  object Answer {
-    import scala.collection.JavaConversions._
-    def letters(javaList: java.util.List[String]): List[String] = javaList.toList.filter { _.length == 1 }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("letters") {
     val javaList: java.util.List[String] = new java.util.ArrayList[String]()

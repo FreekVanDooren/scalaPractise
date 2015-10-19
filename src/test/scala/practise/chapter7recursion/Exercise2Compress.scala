@@ -17,41 +17,7 @@ class Exercise2Compress extends FunSuite {
     //The reverse of compress
     def decompress(s: String): String = ???
   }
-  //startAnswer
-  object Answer {
-    def compress(s: String): String = s.toList match {
-      case Nil => ""
-      case first :: rest => compress1(rest, first, 1).mkString
-    }
-    def compress1(list: List[Char], letter: Char, amount: Int): List[Char] = list match {
-      case Nil => letterOutput(letter, amount)
-      case first :: rest if first == letter => compress1(rest, letter, amount + 1)
-      case first :: rest if first != letter => letterOutput(letter, amount) ::: compress1(rest, first, 1)
-    }
-    def letterOutput(letter: Char, amount: Int): List[Char] = {
-      if (amount == 1) List(letter)
-      else letter :: amount.toString.toList
-    }
-
-    def decompress(s: String): String = decompress1(s.toList).mkString
-    def decompress1(list: List[Char]): List[Char] = list match {
-      case Nil => Nil
-      case first :: rest =>
-        val digits: String = rest.takeWhile(isDigit).mkString
-        val amount: Int = stringToAmount(digits)
-        val restWithoutDigits: List[Char] = rest.dropWhile(isDigit)
-        List.fill(amount)(first) ::: decompress1(restWithoutDigits)
-    }
-    def isDigit(c: Char): Boolean = {
-      c == '0' || (c >= '1' && c <= '9')
-    }
-    def stringToAmount(s: String) = {
-      if (s.isEmpty) 1
-      else Integer.parseInt(s)
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("compress - no compression") {
     assert(compress("") === "")

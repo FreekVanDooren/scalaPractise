@@ -12,13 +12,7 @@ class Exercise6OptionsAndLists extends FunSuite {
     //hint: flatMap
     def parseInts(input: List[String]): List[Int] = ???
   }
-  //startAnswer
-  object Answer {
-    //hint: flatMap
-    def parseInts(input: List[String]): List[Int] = input.flatMap(parseInt)
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("parseInts - None") {
     assert(parseInts(Nil) === Nil)

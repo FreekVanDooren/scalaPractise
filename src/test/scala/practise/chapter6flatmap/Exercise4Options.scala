@@ -16,22 +16,7 @@ class Exercise4Options extends FunSuite {
     //use 0 for any option that is None
     def addOptionsWithDefault0(o1: Option[Int], o2: Option[Int]): Int = ???
   }
-  //startAnswer
-  object Answer {
-    //add a number, if the option is something
-    def addToOption(o: Option[Int], add: Int): Option[Int] = o.map(_ + add)
-
-    //use 0 if o is None
-    def addToOptionWithDefault0(o: Option[Int], add: Int): Int = o.getOrElse(0) + add
-
-    def addOptions(o1: Option[Int], o2: Option[Int]): Option[Int] = o1.flatMap { i1: Int => addToOption(o2, i1) }
-
-    //use 0 for any option that is None
-    def addOptionsWithDefault0(o1: Option[Int], o2: Option[Int]): Int = o1.getOrElse(0) + o2.getOrElse(0)
-
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("addToOption - None") {
     assert(addToOption(None, 3) === None)
