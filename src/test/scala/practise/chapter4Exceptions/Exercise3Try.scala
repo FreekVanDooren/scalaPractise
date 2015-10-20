@@ -15,6 +15,7 @@ class Exercise3Try extends FunSuite {
   }
 
   object Exercise {
+    def tryDouble(i: Int): Try[Int] = ???
   }
   //startAnswer
   object Answer {
