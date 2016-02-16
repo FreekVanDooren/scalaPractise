@@ -69,7 +69,7 @@ class Exercise3MoreCollectionMethods extends FunSuite {
   }
 
   test("twiceList") {
-    assert(twiceList(List(1, 2, 3)) === List(1, 1, 2, 2, 3, 3))
+    assert(twiceList(List(1, 2, 4, 3)) === List(1, 1, 2, 2, 4, 4, 3, 3))
   }
 
 }

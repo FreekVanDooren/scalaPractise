@@ -28,12 +28,14 @@ class Exercise7FunctionsAreObjects extends FunSuite {
 
   test("listOfFunctions") {
     assert(listOfFunctions.size === 2)
-    assert(listOfFunctions.head(1) === 2)
-    assert(listOfFunctions.head(2) === 3)
-    assert(listOfFunctions.head(3) === 4)
-    assert(listOfFunctions(1)(1) === 3)
-    assert(listOfFunctions(1)(2) === 4)
-    assert(listOfFunctions(1)(3) === 5)
+    val firstFunction = listOfFunctions.head
+    val secondFunction = listOfFunctions(1)
+    assert(firstFunction(1) === 2)
+    assert(firstFunction(2) === 3)
+    assert(firstFunction(3) === 4)
+    assert(secondFunction(1) === 3)
+    assert(secondFunction(2) === 4)
+    assert(secondFunction(3) === 5)
   }
 
 }

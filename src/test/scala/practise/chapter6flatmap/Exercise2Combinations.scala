@@ -2,7 +2,7 @@ package practise.chapter6flatmap
 
 import org.scalatest.FunSuite
 
-
+//Read http://docs.scala-lang.org/tutorials/FAQ/yield.html
 class Exercise2Combinations extends FunSuite {
   object Exercise {
     //a helper function for combinationsFlatMap
