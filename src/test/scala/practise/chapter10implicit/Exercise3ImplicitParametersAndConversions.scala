@@ -6,14 +6,7 @@ class Exercise3ImplicitParametersAndConversions extends org.scalatest.FunSuite {
     //Create a class HelloString, which can be implicitly created from a String
     //and define the method greet on it
   }
-  //startAnswer
-  object Answer {
-    implicit class HelloString(val from: String) {
-      def greet(implicit greeting: String) = s"$greeting $from"
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
 //Uncomment these tests
 //  test("Hello World") {

@@ -11,26 +11,7 @@ class Exercise2List extends FunSuite {
 
     def matchList(list: List[Any]): String = ???
   }
-  //startAnswer
-  object Answer {
-    //try to match with ::
-    def firstElement(list: List[Int]): Int = list match {
-      case first :: _ => first
-    }
-
-    def first2Elements(list: List[Int]): List[Int] = list match {
-      case first :: second :: _ => List(first, second)
-    }
-
-    def matchList(list: List[Any]): String = list match {
-      case Nil => "empty"
-      case _ if list.size > 10 => "a lot of elements"
-      case (_ : Int) :: _ => "starts with a number"
-      case (s : String) :: _ => s"starts with $s"
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("firstElement") {
     assert(firstElement(1 :: Nil) === 1)

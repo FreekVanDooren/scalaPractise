@@ -10,18 +10,7 @@ class Exercise6Counter extends FunSuite {
       def newNumber(): Int = ???
     }
   }
-  //startAnswer
-  object Answer {
-    class Counter(startWith: Int) {
-      var current = startWith - 1
-      def newNumber(): Int = {
-        current += 1
-        current
-      }
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("Counter starting with 0") {
     val c = new Counter(0)

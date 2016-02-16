@@ -15,19 +15,7 @@ class Exercise9Traits extends FunSuite {
     //And the same for circle
     val circle: Shape = ???
   }
-  //startAnswer
-  object Answer {
-    class Triangle extends Shape {
-      override def describe = "pointy"
-    }
-    class Circle extends Shape {
-      override def describe = "round"
-    }
-    val triangle: Shape = new Triangle
-    val circle: Shape = new Circle
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("a triangle is pointy") {
     assert(triangle.describe === "pointy")

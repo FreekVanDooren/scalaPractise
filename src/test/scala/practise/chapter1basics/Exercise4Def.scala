@@ -9,12 +9,7 @@ class Exercise4Def extends FunSuite {
     //Add one to x
     def addOne(x: Int): Int = ???
   }
-  //startAnswer
-  object Answer {
-    def addOne(x: Int): Int = x + 1
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("addOne - 1 + 1 = 2") {
     assert(addOne(1) === 2)

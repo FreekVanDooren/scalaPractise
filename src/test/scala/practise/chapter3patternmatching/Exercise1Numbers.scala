@@ -10,24 +10,7 @@ class Exercise1Numbers extends FunSuite {
 
     def matchNumber(number: Any): String = ???
   }
-  //startAnswer
-  object Answer {
-    def matchInt(number: Int): String = number match {
-      case 1 => "one"
-      case 2 => "two"
-      case x if x < 10 => "few"
-      case x if x > 10 => "many"
-    }
-
-    def matchNumber(number: Any): String = number match {
-      case x: Integer if x > 10 => "a big Integer"
-      case _: Integer => "an Integer"
-      case _: Double => "a Double"
-      case _ => "not a number"
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("matchInt - match on value") {
     assert(matchInt(1) === "one")

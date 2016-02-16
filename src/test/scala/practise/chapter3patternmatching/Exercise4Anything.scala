@@ -10,21 +10,7 @@ class Exercise4Anything extends FunSuite {
   object Exercise {
     def matchAnything(o: Any): String = ???
   }
-  //startAnswer
-  object Answer {
-    def matchAnything(o: Any): String = o match {
-      case i: Int if i < 100 => i.toString
-      case i: Int => "too much"
-      case SwimmingTrunks => "swimming trunks"
-      case RhymingDictionary => "rhyming dictionary"
-      case Singer(name) => s"a singer called $name"
-      case l: List[Any] => s"a list with ${l.length} elements"
-      case f: Function[_, _] => "a function"
-      case _ => "something else"
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("numbers - Anything under 100 returns itself as a String") {
     (1 to 99).foreach { i =>

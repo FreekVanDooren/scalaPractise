@@ -7,15 +7,7 @@ class Exercise3RegularExpressions extends org.scalatest.FunSuite {
 
     def findDate(s: String): Option[String] = ???
   }
-  //startAnswer
-  object Answer {
-    val dateregex = """(\d\d\d\d)-(\d\d)-(\d\d)"""
-    def isDate(s: String): Boolean = s.matches(dateregex)
-
-    def findDate(s: String): Option[String] = dateregex.r.findFirstIn(s)
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("isDate") {
     assert(isDate("2011-11-11"))

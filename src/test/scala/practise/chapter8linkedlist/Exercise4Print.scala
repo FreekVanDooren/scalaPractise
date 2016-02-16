@@ -11,25 +11,7 @@ class Exercise4Print extends FunSuite {
   object Exercise {
     def printList(list: AbstractLinkedList): String = ???
   }
-  //startAnswer
-  object Answer {
-    def printList(list: AbstractLinkedList): String = {
-      "[" + printList1(list) + "]"
-    }
-
-    def printList1(list: AbstractLinkedList): String = list match {
-      case EmptyList => ""
-      case LinkedList(value, EmptyList) => print1(value)
-      case LinkedList(value, rest) => print1(value) + "," + printList1(rest)
-    }
-
-    def print1(x: Any) = x match {
-      case list: AbstractLinkedList => printList(list)
-      case value => value.toString
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("printList - []") {
     assert(printList(EmptyList) === "[]")

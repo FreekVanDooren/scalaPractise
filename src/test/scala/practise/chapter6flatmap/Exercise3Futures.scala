@@ -12,16 +12,7 @@ class Exercise3Futures extends FunSuite {
 
     def addFutures(f1: Future[Int], f2: Future[Int]): Future[Int] = ???
   }
-  //startAnswer
-  object Answer {
-    def addToFuture(f: Future[Int], add: Int): Future[Int] = f.map(_ + add)
-
-    def addFutures(f1: Future[Int], f2: Future[Int]): Future[Int] = f1.flatMap { i1 =>
-      f2.map { i2 => i1 + i2 }
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("addToFuture") {
     val f: Future[Int] = Future { 1 + 1 }

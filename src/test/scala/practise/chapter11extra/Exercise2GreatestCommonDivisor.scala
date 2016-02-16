@@ -5,12 +5,7 @@ class Exercise2GreatestCommonDivisor extends org.scalatest.FunSuite {
   object Exercise {
     def greatestCommonDivisor(i1: Int, i2: Int): Int = ???
   }
-  //startAnswer
-  object Answer {
-    def greatestCommonDivisor(i1: Int, i2: Int): Int = ???
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("greatestCommonDivisor") {
     assert(greatestCommonDivisor(1, 10) === 1)

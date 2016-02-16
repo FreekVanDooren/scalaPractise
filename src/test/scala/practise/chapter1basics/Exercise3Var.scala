@@ -8,13 +8,7 @@ class Exercise3Var extends FunSuite {
     var count = 1
     count = ???
   }
-  //startAnswer
-  object Answer {
-    var count = 1
-    count = 2
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("count = 2") {
    assert(count === 2)

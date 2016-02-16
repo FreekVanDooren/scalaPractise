@@ -14,20 +14,7 @@ class Exercise4BinarySortedTree extends org.scalatest.FunSuite {
     def createTree(values: List[Int]): Tree = ???
   }
 
-  //startAnswer
-  object Answer {
-    abstract class Tree(value: Int) {
-      def contains(v: Int): Boolean = ???
-    }
-    case class Branch(value: Int, left: Tree, right: Tree) extends Tree(value)
-    case class Leaf(value: Int) extends Tree(value)
-
-    def createTree(values: List[Int]): Tree = ???
-  }
-
-  import Answer._
-
-  //endAnswer
+  import Exercise._
 
   test("createTree") {
     assert(createTree(List(1)) === Leaf(1))

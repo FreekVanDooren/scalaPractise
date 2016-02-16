@@ -16,12 +16,7 @@ class Exercise5Try extends FunSuite {
   object Exercise {
     def allSteps: Try[Step2Output] = ???
   }
-  //startAnswer
-  object Answer {
-    def allSteps: Try[Step2Output] = step1.flatMap(step2)
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("doAllSteps") {
     assert(allSteps.isSuccess)

@@ -14,16 +14,7 @@ class Exercise3Create extends FunSuite {
     //hint: http://www.tutorialspoint.com/scala/functions_variable_arguments.htm
     def createLinkedList(values: String*): AbstractLinkedList = ???
   }
-  //startAnswer
-  object Answer {
-    def createLinkedList(values: String*): AbstractLinkedList = createLinkedList1(values.toList)
-    def createLinkedList1(values: List[String]): AbstractLinkedList = values match {
-      case Nil => EmptyList
-      case first :: rest => LinkedList(first, createLinkedList1(rest))
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("EmptyList") {
     assert(createLinkedList() === EmptyList)

@@ -15,20 +15,7 @@ class Exercise1RepeatWords extends FunSuite {
     //repeat all the words in the input list the specified number of times
     def repeatWords(input: List[(Int, String)]): List[String] = ???
   }
-  //startAnswer
-  object Answer {
-    def allWordsIn(sentences: List[String]): List[String] = sentences.flatMap { _.split(" ") }
-
-    //hint: List.fill
-    def repeatWord(times: Int, word: String): List[String] = List.fill(times)(word)
-
-    //repeat all the words in the input list the specified number of times
-    def repeatWords(input: List[(Int, String)]): List[String] = input.flatMap {
-      case (times, word) => repeatWord(times, word)
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("allWordsIn") {
     assert(allWordsIn(List("bla", "bla")) === List("bla", "bla"))

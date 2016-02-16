@@ -23,14 +23,7 @@ class Exercise5Option extends FunSuite {
     //So call javaMap.get and transform the result into an Option
     def javaLibraryWrapper(i: Int): Option[Int] = ???
   }
-  //startAnswer
-  object Answer {
-    def firstEven(list: List[Int]): Option[Int] = list.find(_ % 2 == 0)
-    def halfFirstEven(list: List[Int]): Option[Int] = firstEven(list).map(_ / 2)
-    def javaLibraryWrapper(i: Int): Option[Int] = Option(javaMap.get(i))
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("firstEven") {
     assert(firstEven(Nil) === None)

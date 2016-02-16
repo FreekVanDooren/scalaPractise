@@ -17,12 +17,7 @@ class Exercise3Try extends FunSuite {
   object Exercise {
     def tryDouble(i: Int): Try[Int] = ???
   }
-  //startAnswer
-  object Answer {
-    def tryDouble(i: Int): Try[Int] = Try(double(i))
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("tryDouble") {
     assert(tryDouble(1).isSuccess)

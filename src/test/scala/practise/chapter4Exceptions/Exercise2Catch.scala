@@ -11,18 +11,7 @@ class Exercise2Catch extends FunSuite {
     //Will return infinity instead of ArithmeticException
     def divide(a: Int, b: Int): Int = ???
   }
-  //startAnswer
-  object Answer {
-    def divide(a: Int, b: Int): Int = {
-      try {
-        a / b
-      } catch {
-        case _: ArithmeticException => infinity
-      }
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("divide - happy") {
     assert(divide(1, 1) === 1)

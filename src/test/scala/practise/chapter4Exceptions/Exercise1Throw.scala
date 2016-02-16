@@ -10,15 +10,7 @@ class Exercise1Throw extends FunSuite {
     //throws a TooHighException if i>10
     def double(i: Int): Int = ???
   }
-  //startAnswer
-  object Answer {
-    def double(i: Int): Int = {
-      if (i > 10) throw new TooHighException
-      2 * i
-    }
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("double - low") {
     assert(double(0) === 0)

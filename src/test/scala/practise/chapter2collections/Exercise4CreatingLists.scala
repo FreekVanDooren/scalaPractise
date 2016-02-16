@@ -16,18 +16,7 @@ class Exercise4CreatingLists extends FunSuite {
     //add all these lists together using :::
     def allTogether: List[Any] = ???
   }
-  //startAnswer
-  object Answer {
-    def emptyList: List[Any] = Nil
-
-    def twoThree: List[Any] = List(2, 3)
-
-    def oneTwoThree: List[Any] = 1 :: twoThree
-
-    def allTogether: List[Any] = emptyList ::: twoThree ::: oneTwoThree
-  }
-  import Answer._
-  //endAnswer
+  import Exercise._
 
   test("lists") {
     assert(emptyList === Nil)
